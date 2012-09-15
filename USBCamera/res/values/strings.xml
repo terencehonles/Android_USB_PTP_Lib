@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="desc">Description of an image</string>
+    <string name="hello">Hello World, USBCamera Activity!</string>
+    <string name="app_name">USBCameraTest</string>
+    <string name="Button1">Get DeviceInfo</string>
+    <string name="Button2">Detailed get DeviceInfo</string>
+    <string name="Button3">Take Picture</string>
+    <string name="Button4">Test Function Button</string>
+    <string name="Button5">Set Shutter Speed</string>
+    <string name="Button6">Set ISO</string>
+    <string name="Button7">Set Aperture</string>
+    <string name="Button8">Set Picture Style</string>
+    <string name="Button9">Set White Balance</string>
+    <string name="Button10">Set Exposure</string>
+    <string name="Button11">Set Drive Mode</string>
+    <string name="Button12">Set Metering Mode</string>
+    <string name="Button13">Init Liveview</string>
+    <string name="ButtonMoveForward">Move Focus +</string>
+    <string name="ButtonMoveBackward">Move Focus -</string>
+    <string name="DefaultTV">Nothing here.</string>
+    <string name="startLiveViewButton">Start Liveview</string>
+    <string name="endLiveViewButton">End Liveview</string>
+    
+    
+    <string-array name="shutter_list">
+	    <item>SHUTTER_SPEED_BULB</item> 
+	    <item>SHUTTER_SPEED_30_SEC</item> 
+	    <item>SHUTTER_SPEED_25_SEC</item> 
+		<item>SHUTTER_SPEED_20_SEC</item> 
+		<item>SHUTTER_SPEED_15_SEC</item> 
+		<item>SHUTTER_SPEED_13_SEC</item> 
+		<item>SHUTTER_SPEED_10_SEC</item> 
+		<item>SHUTTER_SPEED_8_SEC</item> 
+		<item>SHUTTER_SPEED_6_SEC</item> 
+		<item>SHUTTER_SPEED_5_SEC</item> 
+		<item>SHUTTER_SPEED_4_SEC</item> 
+		<item>SHUTTER_SPEED_3_2_SEC</item> 
+		<item>SHUTTER_SPEED_2_5_SEC</item> 
+		<item>SHUTTER_SPEED_2_SEC</item> 
+		<item>SHUTTER_SPEED_1_6_SEC</item> 
+		<item>SHUTTER_SPEED_1_3_SEC</item> 
+		<item>SHUTTER_SPEED_1_SEC</item> 
+		<item>SHUTTER_SPEED_0_8_SEC</item> 
+		<item>SHUTTER_SPEED_0_6_SEC</item> 
+		<item>SHUTTER_SPEED_0_5_SEC</item> 
+		<item>SHUTTER_SPEED_0_4_SEC</item> 
+		<item>SHUTTER_SPEED_0_3_SEC</item> 
+		<item>SHUTTER_SPEED_1_4</item> 
+		<item>SHUTTER_SPEED_1_5</item> 
+		<item>SHUTTER_SPEED_1_6</item> 
+		<item>SHUTTER_SPEED_1_8</item> 
+		<item>SHUTTER_SPEED_1_10</item> 
+		<item>SHUTTER_SPEED_1_13</item> 
+		<item>SHUTTER_SPEED_1_15</item> 
+		<item>SHUTTER_SPEED_1_20</item> 
+		<item>SHUTTER_SPEED_1_25</item> 
+		<item>SHUTTER_SPEED_1_30</item> 
+		<item>SHUTTER_SPEED_1_40</item> 
+		<item>SHUTTER_SPEED_1_50</item> 
+		<item>SHUTTER_SPEED_1_60</item> 
+		<item>SHUTTER_SPEED_1_80</item> 
+		<item>SHUTTER_SPEED_1_100</item> 
+		<item>SHUTTER_SPEED_1_125</item> 
+		<item>SHUTTER_SPEED_1_160</item> 
+		<item>SHUTTER_SPEED_1_200</item> 
+		<item>SHUTTER_SPEED_1_250</item> 
+		<item>SHUTTER_SPEED_1_320</item> 
+		<item>SHUTTER_SPEED_1_400</item> 
+		<item>SHUTTER_SPEED_1_500</item> 
+		<item>SHUTTER_SPEED_1_640</item> 
+		<item>SHUTTER_SPEED_1_800</item> 
+		<item>SHUTTER_SPEED_1_1000</item> 
+		<item>SHUTTER_SPEED_1_1250</item> 
+		<item>SHUTTER_SPEED_1_1600</item> 
+		<item>SHUTTER_SPEED_1_2000</item> 
+		<item>SHUTTER_SPEED_1_2500</item> 
+		<item>SHUTTER_SPEED_1_3200</item> 
+		<item>SHUTTER_SPEED_1_4000</item> 
+		<item>SHUTTER_SPEED_1_5000</item> 
+		<item>SHUTTER_SPEED_1_6400</item> 
+		<item>SHUTTER_SPEED_1_8000</item> 
+    </string-array> 
+    
+<string-array name="nikon_shutter_list">
+	<item>NK_ShutterSpeed_4000</item> 
+	<item>NK_ShutterSpeed_3200</item>	 
+	<item>NK_ShutterSpeed_2500</item>	 
+	<item>NK_ShutterSpeed_2000</item> 
+	<item>NK_ShutterSpeed_1600</item>
+	<item>NK_ShutterSpeed_1250</item> 
+	<item>NK_ShutterSpeed_1000</item> 
+	<item>NK_ShutterSpeed_800</item> 
+	<item>NK_ShutterSpeed_640</item> 
+	<item>NK_ShutterSpeed_500</item> 
+	<item>NK_ShutterSpeed_400</item> 
+	<item>NK_ShutterSpeed_320</item> 
+	<item>NK_ShutterSpeed_250</item> 
+	<item>NK_ShutterSpeed_200</item> 
+	<item>NK_ShutterSpeed_160</item> 
+	<item>NK_ShutterSpeed_125</item> 
+	<item>NK_ShutterSpeed_100</item> 
+	<item>NK_ShutterSpeed_80</item> 
+	<item>NK_ShutterSpeed_60</item> 
+	<item>NK_ShutterSpeed_50</item> 
+	<item>NK_ShutterSpeed_40</item> 
+	<item>NK_ShutterSpeed_30</item> 
+	<item>NK_ShutterSpeed_25</item> 
+	<item>NK_ShutterSpeed_20</item> 
+	<item>NK_ShutterSpeed_15</item> 
+	<item>NK_ShutterSpeed_13</item> 
+	<item>NK_ShutterSpeed_10</item> 
+	<item>NK_ShutterSpeed_8</item> 
+	<item>NK_ShutterSpeed_6</item> 
+	<item>NK_ShutterSpeed_5</item> 
+	<item>NK_ShutterSpeed_4</item> 
+	<item>NK_ShutterSpeed_3</item> 
+	<item>NK_ShutterSpeed_2_5</item> 
+	<item>NK_ShutterSpeed_2</item> 
+	<item>NK_ShutterSpeed_1_6</item> 
+	<item>NK_ShutterSpeed_1_3</item> 
+	<item>NK_ShutterSpeed_1_sec</item> 
+	<item>NK_ShutterSpeed_1_3_sec</item> 
+	<item>NK_ShutterSpeed_1_6_sec</item> 
+	<item>NK_ShutterSpeed_2_sec</item> 
+	<item>NK_ShutterSpeed_2_5_sec</item> 
+	<item>NK_ShutterSpeed_3_sec</item> 
+	<item>NK_ShutterSpeed_4_sec</item> 
+	<item>NK_ShutterSpeed_5_sec</item> 
+	<item>NK_ShutterSpeed_6_sec</item> 
+	<item>NK_ShutterSpeed_8_sec</item> 
+	<item>NK_ShutterSpeed_10_sec</item> 
+	<item>NK_ShutterSpeed_13_sec</item> 
+	<item>NK_ShutterSpeed_15_sec</item> 
+	<item>NK_ShutterSpeed_20_sec</item> 
+	<item>NK_ShutterSpeed_25_sec</item> 
+	<item>NK_ShutterSpeed_30_sec</item> 
+	<item>NK_ShutterSpeed_Bulb</item> 
+</string-array>     
+    
+    <string-array name="iso_list">
+		<item>ISO_Auto</item> 
+		<item>ISO_50</item> 
+		<item>ISO_100</item> 
+		<item>ISO_125</item> 
+		<item>ISO_160</item> 
+		<item>ISO_200</item> 
+		<item>ISO_250</item> 
+		<item>ISO_320</item> 
+		<item>ISO_400</item> 
+		<item>ISO_500</item> 
+		<item>ISO_640</item> 
+		<item>ISO_800</item> 
+		<item>ISO_1000</item> 
+		<item>ISO_1250</item> 
+		<item>ISO_1600</item> 
+		<item>ISO_3200</item> 
+    </string-array>     
+    
+    <string-array name="nikon_iso_list">
+		<item>NK_ISO_100</item>
+		<item>NK_ISO_125</item>
+		<item>NK_ISO_160</item>
+		<item>NK_ISO_200</item>
+		<item>NK_ISO_250</item>
+		<item>NK_ISO_320</item>
+		<item>NK_ISO_400</item>
+		<item>NK_ISO_500</item>
+		<item>NK_ISO_640</item>
+		<item>NK_ISO_800</item>
+		<item>NK_ISO_1000</item>
+		<item>NK_ISO_1250</item>
+		<item>NK_ISO_1600</item>
+		<item>NK_ISO_2000</item>
+		<item>NK_ISO_2500</item>
+		<item>NK_ISO_3200</item>
+		<item>NK_ISO_4000</item>
+		<item>NK_ISO_5000</item>
+		<item>NK_ISO_6400</item>
+		<item>NK_ISO_Hi03</item>
+		<item>NK_ISO_Hi07</item>
+		<item>NK_ISO_Hi_1</item>
+		<item>NK_ISO_Hi_2</item>
+    </string-array>  
+    
+    
+    <string-array name="aperture_list">
+		<item>APERTURE_F1_2</item>
+		<item>APERTURE_F1_4</item>
+		<item>APERTURE_F1_6</item>
+		<item>APERTURE_F1_8</item>
+		<item>APERTURE_F2_0</item>
+		<item>APERTURE_F2_2</item>
+		<item>APERTURE_F2_5</item>
+		<item>APERTURE_F2_8</item>
+		<item>APERTURE_F3_2</item>
+		<item>APERTURE_F3_5</item>
+		<item>APERTURE_F4_0</item>
+		<item>APERTURE_F4_5</item>
+		<item>APERTURE_F5_0</item>
+		<item>APERTURE_F5_6</item>
+		<item>APERTURE_F6_3</item>
+		<item>APERTURE_F7_1</item>
+		<item>APERTURE_F8</item>
+		<item>APERTURE_F9</item>
+		<item>APERTURE_F10</item>
+		<item>APERTURE_F11</item>
+		<item>APERTURE_F13</item>
+		<item>APERTURE_F14</item>
+		<item>APERTURE_F16</item>
+		<item>APERTURE_F18</item>
+		<item>APERTURE_F20</item>
+		<item>APERTURE_F22</item>
+		<item>APERTURE_F25</item>
+		<item>APERTURE_F29</item>
+		<item>APERTURE_F32</item>
+    </string-array>     
+ 
+<string-array name="nikon_aperture_list">
+	<item>NK_Aperture_3_50</item>
+	<item>NK_Aperture_4_00</item>
+	<item>NK_Aperture_4_50</item>
+	<item>NK_Aperture_4_80</item>
+	<item>NK_Aperture_5</item>
+	<item>NK_Aperture_5_60</item>
+	<item>NK_Aperture_6_30</item>
+	<item>NK_Aperture_7_10</item>
+	<item>NK_Aperture_8</item>
+	<item>NK_Aperture_9</item>
+	<item>NK_Aperture_10</item>
+	<item>NK_Aperture_11</item>	
+	<item>NK_Aperture_13</item>	
+	<item>NK_Aperture_14</item>	
+	<item>NK_Aperture_16</item>	
+	<item>NK_Aperture_18</item>	
+	<item>NK_Aperture_20</item>
+	<item>NK_Aperture_22</item>	
+	<item>NK_Aperture_25</item>	
+	<item>NK_Aperture_29</item>	
+	<item>NK_Aperture_32</item>
+	<item>NK_Aperture_36</item>
+</string-array> 
+    
+    
+    <string-array name="picturestyle_list">
+        <item>PictureStyle_Standard</item>
+	    <item>PictureStyle_Portrait</item>
+	    <item>PictureStyle_Landscape</item>
+	    <item>PictureStyle_Neutral</item>
+	    <item>PictureStyle_Faithful</item>
+	    <item>PictureStyle_Monochrome</item>
+	    <item>PictureStyle_User1</item>
+	    <item>PictureStyle_User2</item>
+	    <item>PictureStyle_User3</item>
+    </string-array>     
+    
+    <string-array name="whitebalance_list">   
+	 	<item>AutoWhiteBalance</item>
+		<item>Daylight</item>
+		<item>Clouds</item>
+		<item>Tungsteen</item>
+		<item>Fluoriscent</item>
+		<item>Strobe</item>
+		<item>WhitePaper</item>
+		<item>Shade</item>
+     </string-array>  
+   
+<string-array name="nikon_whitebalance_list">   
+	<item>NK_WhiteBalance_Undefined</item> 
+	<item>NK_WhiteBalance_Manual</item> 
+	<item>NK_WhiteBalance_Automatic</item> 
+	<item>NK_WhiteBalance_One_push_Automatic</item> 
+	<item>NK_WhiteBalance_Daylight</item> 
+	<item>NK_WhiteBalance_Fluorescent</item> 
+	<item>NK_WhiteBalance_Tungsten</item> 
+	<item>NK_WhiteBalance_Flash_Strobe</item> 
+	<item>NK_WhiteBalance_Clouds</item> 
+	<item>NK_WhiteBalance_Shade</item>         
+	<item>NK_WhiteBalance_Preset</item>             
+</string-array>  
+    
+    <string-array name="exposure_list">  
+    <item>EXPOSURE_P_5_0d0</item>
+	<item>EXPOSURE_P_4_2d30</item>			
+	<item>EXPOSURE_P_4_1d30</item>			
+	<item>EXPOSURE_P_4_0d0</item>		
+	<item>EXPOSURE_P_3_2d30</item>				
+	<item>EXPOSURE_P_3_1d30</item>			
+	<item>EXPOSURE_P_3_0d0</item>			
+	<item>EXPOSURE_P_2_2d30</item>		
+	<item>EXPOSURE_P_2_1d20</item>			
+	<item>EXPOSURE_P_2_1d30</item>
+	<item>EXPOSURE_P_2_0d0</item>		
+	<item>EXPOSURE_P_1_2d30</item>	
+	<item>EXPOSURE_P_1_1d20</item>			
+	<item>EXPOSURE_P_1_1d30</item>
+	<item>EXPOSURE_P_1_0d0</item>		
+	<item>EXPOSURE_P_0_2d3</item>			
+	<item>EXPOSURE_P_0_1d2</item>	
+	<item>EXPOSURE_P_0_1d3</item>				
+	<item>EXPOSURE_0</item>
+	<item>EXPOSURE_N_0_1d3</item>				
+	<item>EXPOSURE_N_0_1d2</item>				
+	<item>EXPOSURE_N_0_2d3</item>			
+	<item>EXPOSURE_N_1_0d0</item>			
+	<item>EXPOSURE_N_1_1d30</item>		
+	<item>EXPOSURE_N_1_1d20</item>			
+	<item>EXPOSURE_N_1_2d30</item>				
+	<item>EXPOSURE_N_2_0d0</item>		
+	<item>EXPOSURE_N_2_1d30</item>	
+	<item>EXPOSURE_N_2_1d20</item>		
+	<item>EXPOSURE_N_2_2d30</item>			
+	<item>EXPOSURE_N_3_0d0</item>			
+	<item>EXPOSURE_N_3_1d30</item>	
+	<item>EXPOSURE_N_3_2d30</item>		
+	<item>EXPOSURE_N_4_0d0</item>		
+	<item>EXPOSURE_N_4_1d30</item>		
+	<item>EXPOSURE_N_4_2d30</item>	
+	<item>EXPOSURE_N_5_0d0</item>
+    </string-array> 
+    
+    <string-array name="nikon_exposure_list">  
+		<item>NK_Exposure_N_5_0</item>				
+		<item>NK_Exposure_N_4_7</item>				
+		<item>NK_Exposure_N_4_3</item>				
+		<item>NK_Exposure_N_4_0</item>				
+		<item>NK_Exposure_N_3_7</item>				
+		<item>NK_Exposure_N_3_3</item>				
+		<item>NK_Exposure_N_3_0</item>				
+		<item>NK_Exposure_N_2_7</item>				
+		<item>NK_Exposure_N_2_3</item>
+		<item>NK_Exposure_N_2_0</item>
+		<item>NK_Exposure_N_1_7</item>				
+		<item>NK_Exposure_N_1_3</item>			
+		<item>NK_Exposure_N_1_0</item>
+		<item>NK_Exposure_N_0_7</item>
+		<item>NK_Exposure_N_0_3</item>				
+		<item>NK_Exposure_0</item> 
+		<item>NK_Exposure_P_0_3</item>				
+		<item>NK_Exposure_P_0_7</item>				
+		<item>NK_Exposure_P_1_0</item>				
+		<item>NK_Exposure_P_1_3</item>				
+		<item>NK_Exposure_P_1_7</item>				
+		<item>NK_Exposure_P_2_0</item>				
+		<item>NK_Exposure_P_2_3</item>				
+		<item>NK_Exposure_P_2_7</item>				
+		<item>NK_Exposure_P_3_0</item>				
+		<item>NK_Exposure_P_3_3</item>				
+		<item>NK_Exposure_P_3_7</item>				
+		<item>NK_Exposure_P_4_0</item>			
+		<item>NK_Exposure_P_4_3</item>				
+		<item>NK_Exposure_P_4_7</item>				
+		<item>NK_Exposure_P_5_0</item>
+    </string-array> 
+    
+    
+    
+    <string-array name="drivemode_list">
+        <item>driveSingleShot</item>
+	    <item>driveContinuous</item>
+	    <item>driveTimer10Sec</item>
+    </string-array>    
+ 
+    <string-array name="metering_list">
+        <item>CenterWeightedAverageMetering</item>
+        <item>SpotMetering</item>
+	    <item>EvaluativeMetering</item>
+	    <item>PartialMetering</item>
+    </string-array>     
+    
+</resources>
