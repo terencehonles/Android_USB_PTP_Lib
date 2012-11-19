@@ -16,6 +16,7 @@
 //
 package com.ptplib.usbcamera;
 
+import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 
 import com.ptplib.usbcamera.eos.EosEventConstants;
@@ -708,59 +709,38 @@ Android: UsbDeviceConnection controlTransfer (int requestType, int request, int 
 
                     // read data?
                 } else {
-//                	Log.d(TAG, "Start Read Data");
-                    byte buf1[] = new byte[inMaxPS];
-                    int len = 0;
-                    //len = device.getInputStream(epIn).read(buf1);
-//    				Log.d(TAG, "Receive data, max " +inMaxPS);
-                    len = mConnection.bulkTransfer(epIn, buf1, inMaxPS , DEFAULT_TIMEOUT);
-//                    Log.d(TAG, "received data bytes: " +len);
-
-                    // Get the first bulk packet(s), check header for length
-                    data.data = buf1;
-                    data.length = len;
-                    if (TRACE) {
-                        System.err.println(data.toString());
-                    }
-                    if (!"data".equals(data.getBlockTypeName(data.getBlockType()))
-                            || data.getCode() != command.getCode()
-                            || data.getXID() != command.getXID()) {
-                        throw new PTPException("protocol err 1, " + data);
-                    }
-
-                    // get the rest of it
-                    int expected = data.getLength();
-
-                    // Special handling for the write-to-N-mbytes-file case
-                    //TODO yet to be implemented
-//                    if (data instanceof OutputStreamData) {
-//                        OutputStreamData fd = (OutputStreamData) data;
-//                        fd.write(buf1, Data.HDR_LEN, len - Data.HDR_LEN);
-//                        if (len == inMaxPS && expected != inMaxPS) {
-//                            InputStream is = device.getInputStream(epIn);
-//
-//                            // at max usb data rate, 128K ~= 0.11 seconds
-//                            // typically it's more time than that
-//                            buf1 = new byte[128 * 1024];
-//                            do {
-//                                len = is.read(buf1);
-//                                fd.write(buf1, 0, len);
-//                            } while (len == buf1.length);
-//                        }
-//                    } else 
-                    	if (len == inMaxPS && expected != inMaxPS) {
-                        buf1 = new byte[expected];
-                        System.arraycopy(data.data, 0, buf1, 0, len);
-                        data.data = buf1;
-//        				Log.d(TAG, "read additional bytes " +(expected - len));
-                        data.length += mConnection.bulkTransfer(epIn, buf1, expected - len, DEFAULT_TIMEOUT);//device.getInputStream(epIn).read(buf1, len, expected - len);
-//                        Log.d(TAG, "Read oK");
-                    }
-
-                    // if ((expected % inMaxPS) == 0)
-                    //	... next packet will be zero length
-
-                    // and do whatever parsing needs to be done
+// Log.d(TAG, "Start Read Data");
+					byte readBuffer[] = new byte[inMaxPS];
+					int readLen = 0;
+					readLen = mConnection.bulkTransfer(epIn, readBuffer, inMaxPS,
+							DEFAULT_TIMEOUT);
+					data.data = readBuffer;
+					data.length = readLen;
+					if (!"data".equals(data.getBlockTypeName(data.getBlockType()))
+							|| data.getCode() != command.getCode()
+							|| data.getXID() != command.getXID()) {
+						throw new PTPException("protocol err 1, " + data);
+					}
+					
+					int totalLen = data.getLength();
+					if (totalLen > readLen) {
+						ByteArrayOutputStream dataStream = new ByteArrayOutputStream(
+								totalLen);
+					
+						dataStream.write(readBuffer, 0, readLen);
+						
+						int remaining = totalLen - readLen;
+						while (remaining > 0) {
+							int toRead = (remaining > inMaxPS )? inMaxPS : remaining;
+							readLen = mConnection.bulkTransfer(epIn, readBuffer, toRead,
+									DEFAULT_TIMEOUT);
+							dataStream.write(readBuffer, 0, readLen);
+							remaining -= readLen;
+						}
+						
+						data.data = dataStream.toByteArray();
+						data.length = data.length;
+					}
                     data.parse();
                 }
             }
