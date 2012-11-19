@@ -748,13 +748,20 @@ Android: UsbDeviceConnection controlTransfer (int requestType, int request, int 
 //                            } while (len == buf1.length);
 //                        }
 //                    } else 
-                    	if (len == inMaxPS && expected != inMaxPS) {
-                        buf1 = new byte[expected];
-                        System.arraycopy(data.data, 0, buf1, 0, len);
-                        data.data = buf1;
-//        				Log.d(TAG, "read additional bytes " +(expected - len));
-                        data.length += mConnection.bulkTransfer(epIn, buf1, expected - len, DEFAULT_TIMEOUT);//device.getInputStream(epIn).read(buf1, len, expected - len);
-//                        Log.d(TAG, "Read oK");
+                     if (len == inMaxPS && expected != inMaxPS) {
+                      	buf1 = new byte[expected];
+						byte [] buf2 = new byte[expected];
+						//	System.arraycopy(data.data, 0, buf1, 0, len);
+						//	data.data = buf1;
+						// Log.d(TAG, "read additional bytes " +(expected - len));
+						System.arraycopy(data.data, 0, buf2, 0, inMaxPS);
+						data.length += mConnection.bulkTransfer(epIn, buf1,
+								expected - len, DEFAULT_TIMEOUT);// device.getInputStream(epIn).read(buf1,
+																// len, expected
+																// - len);
+						// Log.d(TAG, "Read oK");
+						System.arraycopy(buf1, 0, buf2, inMaxPS, data.length-inMaxPS);
+						data.data = buf2;
                     }
 
                     // if ((expected % inMaxPS) == 0)
